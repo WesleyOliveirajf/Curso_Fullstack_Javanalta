@@ -1,6 +1,8 @@
 package EtapadeConstrucao;
 
-public class PlantaCasa {
+import java.lang.classfile.attribute.SourceDebugExtensionAttribute;
+
+public class PlantaCasa implements Construcao {
     // Atributos
     public int metragem;
     public int numeroQuartos;
@@ -8,6 +10,7 @@ public class PlantaCasa {
     public String cor;
     public String material;
 
+    @Override
     public void construir() {
         System.out.println(" A casa foi contruida com as caracteristica");
         System.out.println("Metragem: " + metragem);
@@ -16,6 +19,18 @@ public class PlantaCasa {
         System.out.println("Material: " + material);
 
     }
+    // Anotações
+    @Override
+    public void pintar(String cor) {
+        System.out.println("Pintado a casa com outra cor: " + cor);
+
+    }
+
+    @Override
+    public int calcularCustoConstrucao(int custoPorMetro) {
+        return metragem + custoPorMetro;
+    }
+
 
     public void pintar() {
         System.out.println("cor: " + cor);

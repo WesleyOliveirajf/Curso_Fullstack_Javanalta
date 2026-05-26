@@ -1,8 +1,8 @@
-import EtapadeConstrucao.PlantaCasa;
+package EtapadeConstrucao;
 
 public class Casa {
     public static void main(String[] args) {
-        // Criando Objeto Casa
+        // Criando Objeto EtapadeConstrucao.Casa
         PlantaCasa casa = new PlantaCasa();
 
         // Inicializando Atribudos casa
